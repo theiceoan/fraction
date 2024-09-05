@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none;
 }
 
 body {
@@ -12,5 +14,4 @@ body {
   background-color: #f4f4f4; /* Light background color */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
