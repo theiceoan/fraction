@@ -31,12 +31,12 @@ export const Header = () => {
 
 			<div onClick={toggleMenu} className='hamburger-outer-container'>
 				<Menu noOverlay right pageWrapId={ "page-wrap"} isOpen={isOpen}>
-					<main id='page-wrap'>
+					{/* <main id='page-wrap'> */}
 						<Nav.Link href="#our-story">Our Story</Nav.Link>
 						<Nav.Link href="#what-we-do">What We Do</Nav.Link>
 						<Nav.Link href="#our-work">Our Work</Nav.Link>
 						<Nav.Link href="#work-with-us">Work With Us</Nav.Link>
-					</main>
+					{/* </main> */}
 				</Menu>
 			</div>
 			</Container>

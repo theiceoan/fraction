@@ -60,11 +60,16 @@
 
 	.hamburger-outer-container {
 		display: block;
+		column-gap: 20px;
 	}
 
 	.bm-burger-button {
 		display: block;
 	} 
+}
+
+.hamburger-outer-container .nav-link:active {
+  color: #61DAFB;
 }
 
 /* Position and sizing of burger button */
@@ -76,6 +81,10 @@
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #61DAFB;
+}
+
+.bm-burger-button:visited {
+	transform: scale(1.1);
 }
 
 /*
@@ -101,13 +110,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
+  color: whitesmoke;
+	padding: 1em;
 }
 
 /* Individual item */
+
 .bm-item {
-  display: inline-block;
+	margin-bottom: 2em;
 }
 
 /* Styling of overlay */
