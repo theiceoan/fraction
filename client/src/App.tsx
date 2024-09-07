@@ -4,13 +4,13 @@ import { Header } from './header/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-container">
       <Header />
-      <header className="App-header">
-        <p>
+      <main id='page-wrap'>
+        <p className='hold-text'>
           Main App Coming Soon...
         </p>
-      </header>
+      </main>
     </div>
   );
 }

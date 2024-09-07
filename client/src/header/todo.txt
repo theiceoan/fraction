@@ -1,0 +1,3 @@
+- should be sliding to push content to the side not overlaying
+- clicking one of the links should close side bar
+- clicking outside side bar should close it
