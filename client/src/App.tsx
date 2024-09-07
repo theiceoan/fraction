@@ -4,7 +4,7 @@ import { Header } from './header/Header';
 
 function App() {
   return (
-    <div className="app-container">
+    <div id="app-container">
       <Header />
       <main id='page-wrap'>
         <p className='hold-text'>
