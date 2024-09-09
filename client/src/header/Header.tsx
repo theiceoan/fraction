@@ -15,6 +15,17 @@ export const Header = () => {
 	const handleCategoryClick = (e:MouseEvent) => {
 		setIsOpen(false)
 	}
+	const handleClickOutside = (e:Event) => {
+		setIsOpen(false)
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
 	return (
 		<Navbar className='header' bg='dark' sticky='top'>
