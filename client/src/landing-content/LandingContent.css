@@ -1,13 +1,14 @@
 .background-graphic {
-	background-image: url('./graphics/background.svg');
+	background-image: url('../../public//graphics/background.svg');
 	background-size: 45%;
-  /* background-position-x: right; */
-	background-position: center;
+  background-position-x: center;
+	background-position-y: 70%;
+	/* background-position: center; */
   background-repeat: no-repeat;
-	z-index: -1;
+	/* z-index: -1; */
 	position: absolute; /* Positioning it to cover the area */
   top: 0;
-  left: -1em;
+  /* left: -1em; */
   width: 100%; /* Full width */
   height: 100%;
 }
@@ -18,16 +19,29 @@
 @keyframes pulse {
   0% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.6;
   }
   50% {
     transform: scale(0.9);
-    opacity: 0.7;
+    opacity: 0.4;
   }
   100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.4;
   }
+}
+
+.corner-graphic {
+	background-image: url('../../public//graphics/corner.svg');
+	background-size: 45%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -5em;
+	right: -50em;
+	width: 100vw;
+	height: 100vh;
+	/* z-index: -1; */
+	/* opacity: 0.5; */
 }
 
 .landing-content-container {
@@ -36,15 +50,20 @@
   /* justify-content: flex-end; */
 	/* padding: 0px 12px; */
 	height: 100vh;
+	background-color: rgb(33, 37, 41);
 }
 
 .main-text-container, .container-to-be-renamed {
 	width: 50vw;
-	margin-top: 20%;
+	margin-top: 25%;
 	padding: 2em;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	/* height: 100vh; */
 	/* padding: 10px 12px; */
+}
+
+.main-text-container {
+	color: white;
 }
 
 .highlight-green {
@@ -55,4 +74,9 @@
 }
 .highlight-blue {
 	color: #61DAFB;
+}
+
+.benefit-svg {
+  height: 10vmin;
+  margin-bottom: 15px;
 }
