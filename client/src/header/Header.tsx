@@ -8,15 +8,19 @@ import { MouseEvent, useEffect, useRef, useState } from 'react';
 
 export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const menuRef = useRef<HTMLDivElement>(null);
 
   const handleStateChange = (state:State) => {
 		setIsOpen(state.isOpen)
 	};
 	const handleCategoryClick = (e:MouseEvent) => {
+		e.stopPropagation()
 		setIsOpen(false)
 	}
 	const handleClickOutside = (e:Event) => {
-		setIsOpen(false)
+		if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+			setIsOpen(false);
+		}
   };
 
   useEffect(() => {
@@ -42,7 +46,7 @@ export const Header = () => {
 					<Nav.Link href="#work-with-us">Work With Us</Nav.Link>
 				</div>
 
-				<div id='sidepanel-container'>
+				<div id='sidepanel-container' ref={menuRef}>
 					<Menu
 						right noOverlay
 						pageWrapId={ "page-wrap"}
