@@ -31,19 +31,6 @@
   }
 }
 
-.corner-graphic {
-	background-image: url('../../public//graphics/corner.svg');
-	background-size: 45%;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: -5em;
-	right: -50em;
-	width: 100vw;
-	height: 100vh;
-	/* z-index: -1; */
-	/* opacity: 0.5; */
-}
-
 .landing-content-container {
 	display: flex;
   /* align-items: ; */
@@ -79,4 +66,60 @@
 .benefit-svg {
   height: 10vmin;
   margin-bottom: 15px;
+}
+
+.corner-graphic {
+	background-image: url('../../public//graphics/corner.svg');
+	/* background-size: fit; */
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 50vw;
+	height: 50vh;
+/* z-index: -1; */
+	/* opacity: 0.5; */
+}
+
+@media only screen and (max-width: 710px) {
+	.corner-graphic {
+		top: -10%;
+		right: 0%;
+		width: 60%;
+		height: 60%;
+	}
+}
+
+@media only screen and (min-width: 711px) and (max-width: 918px) {
+	.corner-graphic {
+		top: -10%;
+		right: 0%;
+		width: 50%;
+		height: 60%;
+	}
+}
+
+@media only screen and (min-width: 919px) and (max-width: 1180px) {
+	.corner-graphic {
+		top: -10%;
+		right: 0%;
+		width: 40%;
+		height: 60%;
+	}
+}
+
+@media only screen and (min-width: 1181px) and (max-width: 1400px) {
+	.corner-graphic {
+		top: -10%;
+		right: 0%;
+		width: 30%;
+		height: 60%;
+	}
+}
+
+@media only screen and (min-width: 1401px) {
+	.corner-graphic {
+		top: -5%;
+		right: 0%;
+		width: 30%;
+		height: 60%;
+	}
 }
