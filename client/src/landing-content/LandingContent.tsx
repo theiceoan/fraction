@@ -18,7 +18,7 @@ export const LandingContent = () => {
 		return () => clearInterval(intervalId);
 	})
 
-	const handleCategoryClick = (e:MouseEvent<HTMLElement>) => {
+	const handleBenefitClick = (e:MouseEvent<HTMLElement>) => {
 		const className = e.currentTarget.getAttribute('class');
 		if (className === 'left-arrow') {
 			setCurrentBenefit(prevBenefit =>
@@ -41,21 +41,23 @@ export const LandingContent = () => {
 				<h4 style={{paddingBottom: '1em'}}>Tailored solutions that solve your problems
 					and let you focus on delivering value and impact
 				</h4>
-				<Button variant='outline-info'>Want to Know More?</Button>
 			</main>
+			<div className='waiting-list-button-container'>
+				<Button size='lg' variant='outline-info'>Interested? Join Our Waiting List</Button>
+			</div>
 			<main className='container-to-be-renamed'>
 				<Card bg='light' text='black' style={{ opacity: '0.7'}}>
 					<Card.Body>
 						<span className='arrows'>
 							<img
 								className='left-arrow'
-								onClick={handleCategoryClick}
+								onClick={handleBenefitClick}
 								src={leftArrow}
 								alt="left arrow"
 							/>
 							<img
 								className='right-arrow'
-								onClick={handleCategoryClick}
+								onClick={handleBenefitClick}
 								src={rightArrow}
 								alt="right arrow"
 							/>
