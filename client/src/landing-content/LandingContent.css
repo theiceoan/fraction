@@ -1,5 +1,5 @@
 .background-graphic {
-	background-image: url('../../public//graphics/background.svg');
+	background-image: url('../../public/graphics/background.svg');
 	background-size: 45%;
   background-position-x: center;
 	background-position-y: 70%;
@@ -70,7 +70,7 @@
 }
 
 .corner-graphic {
-	background-image: url('../../public//graphics/corner.svg');
+	background-image: url('../../public/graphics/corner.svg');
 	/* background-size: fit; */
 	background-repeat: no-repeat;
 	position: absolute;
@@ -78,6 +78,21 @@
 	height: 50vh;
 /* z-index: -1; */
 	/* opacity: 0.5; */
+}
+
+.arrows {
+	height: 10vmin;
+	/* width: fit-content; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* opacity: 0.5; */
+
+  /* margin-bottom: 15px; */
+}
+
+.right-arrow, .left-arrow {
+	width: 10vmin;
 }
 
 /* mobile device media queries */
@@ -128,30 +143,6 @@
 		opacity: 0.5;
 	}
 }
-
-/* @media only screen and (min-width: 436px) and (max-width: 435px) {
-	.background-graphic {
-		background-size: 70%;
-	}
-
-	.main-text-container, .container-to-be-renamed {
-		margin-top: 25%;
-		padding: 1em;
-		width: 100vw;
-	}
-
-	.landing-content-container {
-		flex-direction: column;
-	}
-
-	.corner-graphic {
-		top: 0%;
-		right: 0%;
-		width: 60%;
-		height: 60%;
-		opacity: 0.5;
-	}
-} */
 
 
 /* media screens bigger than a phone */
