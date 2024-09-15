@@ -6,9 +6,11 @@ import leftArrow from './graphics/leftArrow.svg';
 import rightArrow from './graphics/rightArrow.svg';
 import { MouseEvent, useEffect, useState } from 'react';
 import { benefitsOfOutsourcing } from './static/benefitsOfOutsourcing';
+import { WaitingList } from '../waiting-list/WaitingList';
 
 export const LandingContent = () => {
 	const [currentBenefit, setCurrentBenefit] = useState<number>(0);
+	const [modalShow, setModalShow] = useState<boolean>(false);
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -30,6 +32,7 @@ export const LandingContent = () => {
 	}
 
 	return (
+		<>
 		<div className="landing-content-container">
 			<div className='background-graphic'></div>
 			<div className='corner-graphic'></div>
@@ -43,7 +46,11 @@ export const LandingContent = () => {
 				</h4>
 			</main>
 			<div className='waiting-list-button-container'>
-				<Button size='lg' variant='outline-info'>Interested? Join Our Waiting List</Button>
+				<Button
+					size='lg' variant='outline-info'
+					onClick={() => setModalShow(true)}>
+						Interested? Join Our Waiting List
+				</Button>
 			</div>
 			<main className='container-to-be-renamed'>
 				<Card bg='light' text='black' style={{ opacity: '0.7'}}>
@@ -75,5 +82,7 @@ export const LandingContent = () => {
 				</Card>
 			</main>
 		</div>
+		<WaitingList show={modalShow} onHide={() => setModalShow(false)} />
+		</>
 	)
 }
