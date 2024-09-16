@@ -1,0 +1,22 @@
+.our-clients-container {
+	height: 100vh;
+}
+
+.all-clients-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client-container {
+	width: 200px;
+	/* flex-direction: row; */
+}
+
+.client-container img {
+  max-width: 100%; /* Ensures the image scales within the container */
+  height: auto;
+}
+
