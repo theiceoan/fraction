@@ -1,6 +1,7 @@
 #app-container {
   text-align: center;
-  overflow: hidden;
+  overflow: clip;
+  height: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
