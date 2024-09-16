@@ -65,6 +65,7 @@ export const WaitingList = (props:WaitingListProps) => {
       </Modal.Header>
       <Modal.Body style={formStyles}>
 				<form name="waiting-list" method="POST" data-netlify="true">
+					<input type="hidden" name="form-name" value="waiting-list" />
 					<div onChange={handleFormInput} className="form-container">
 						<Input
 							name="firstName" value={formInput.firstName}
@@ -83,11 +84,12 @@ export const WaitingList = (props:WaitingListProps) => {
 							style={{color: 'white'}} placeholder="Email"
 						/>
 					</div>
+					<Button type="submit">Submit</Button>
 				</form>
       </Modal.Body>
-      <Modal.Footer style={formStyles}>
-        <Button onClick={handleFormSubmit}>Submit</Button>
-      </Modal.Footer>
+      {/* <Modal.Footer style={formStyles}>
+        <Button >Submit</Button>
+      </Modal.Footer> */}
     </Modal>
 		</div>
 	)
