@@ -39,16 +39,16 @@ export const WaitingList = (props:WaitingListProps) => {
 		}));
 	}
 
-	const handleFormSubmit = () => {
-		console.log(formInput);
-		props.onHide();
-		setFormInput({
-			firstName: '',
-			lastName: '',
-			company: '',
-			email: '',
-		})
-	}
+	// const handleFormSubmit = () => {
+	// 	console.log(formInput);
+	// 	props.onHide();
+	// 	setFormInput({
+	// 		firstName: '',
+	// 		lastName: '',
+	// 		company: '',
+	// 		email: '',
+	// 	})
+	// }
 
 	return (
 		<div className="waiting-list-container">
