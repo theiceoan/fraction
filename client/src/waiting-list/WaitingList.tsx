@@ -1,9 +1,9 @@
 import "./WaitingList.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import { Input } from "@mui/material";
-import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 
 interface WaitingListProps {
@@ -64,24 +64,26 @@ export const WaitingList = (props:WaitingListProps) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body style={formStyles}>
-        <div onChange={handleFormInput} className="form-container">
-					<Input
-						name="firstName" value={formInput.firstName}
-						style={{color: 'white'}} placeholder="First Name"
-					/>
-					<Input
-						name="lastName" value={formInput.lastName}
-						style={{color: 'white'}} placeholder="Last Name"
-					/>
-					<Input
-						name="company" value={formInput.company}
-						style={{color: 'white'}} placeholder="Company"
-					/>
-					<Input
-						name="email" value={formInput.email} type="email"
-						style={{color: 'white'}} placeholder="Email"
-					/>
-				</div>
+				<form name="waiting-list" method="POST" data-netlify="true">
+					<div onChange={handleFormInput} className="form-container">
+						<Input
+							name="firstName" value={formInput.firstName}
+							style={{color: 'white'}} placeholder="First Name"
+						/>
+						<Input
+							name="lastName" value={formInput.lastName}
+							style={{color: 'white'}} placeholder="Last Name"
+						/>
+						<Input
+							name="company" value={formInput.company}
+							style={{color: 'white'}} placeholder="Company"
+						/>
+						<Input
+							name="email" value={formInput.email} type="email"
+							style={{color: 'white'}} placeholder="Email"
+						/>
+					</div>
+				</form>
       </Modal.Body>
       <Modal.Footer style={formStyles}>
         <Button onClick={handleFormSubmit}>Submit</Button>
