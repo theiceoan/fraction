@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 // import Form from 'react-bootstrap/Form';
 import { Input } from "@mui/material";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 
 interface WaitingListProps {
@@ -16,6 +16,12 @@ interface FormInput {
 	lastName: string;
 	company: string;
 	email: string;
+}
+
+const encode = (data:any) => {
+	return Object.keys(data)
+			.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+			.join("&");
 }
 
 export const WaitingList = (props:WaitingListProps) => {
@@ -39,16 +45,26 @@ export const WaitingList = (props:WaitingListProps) => {
 		}));
 	}
 
-	// const handleFormSubmit = () => {
-	// 	console.log(formInput);
-	// 	props.onHide();
-	// 	setFormInput({
-	// 		firstName: '',
-	// 		lastName: '',
-	// 		company: '',
-	// 		email: '',
-	// 	})
-	// }
+	const handleFormSubmit = async (e:FormEvent) => {
+		e.preventDefault();
+		const response = await fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({ "form-name": "waiting-list", ...formInput })
+		})
+		if (response.ok) {
+			props.onHide();
+			setFormInput({
+				firstName: '',
+				lastName: '',
+				company: '',
+				email: '',
+			})
+		} else {
+			console.log('handle failure')
+		}
+		// console.log(formInput);
+	}
 
 	return (
 		<div className="waiting-list-container">
@@ -83,7 +99,7 @@ export const WaitingList = (props:WaitingListProps) => {
 							style={{color: 'white'}} placeholder="Email"
 						/>
 					</div>
-					<Button type="submit">Submit</Button>
+					<Button onSubmit={handleFormSubmit} type="submit">Submit</Button>
 				</form>
       </Modal.Body>
       {/* <Modal.Footer style={formStyles}>
