@@ -65,7 +65,6 @@ export const WaitingList = (props:WaitingListProps) => {
       </Modal.Header>
       <Modal.Body style={formStyles}>
 				<form name="waiting-list" method="POST" data-netlify="true">
-					<input type="hidden" name="form-name" value="waiting-list" />
 					<div onChange={handleFormInput} className="form-container">
 						<Input
 							name="firstName" value={formInput.firstName}
