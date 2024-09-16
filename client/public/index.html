@@ -29,6 +29,23 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <form name="waiting-list" netlify netlify-honeypot="bot-field" hidden>
+      <div onChange={handleFormInput} className="form-container">
+        <input
+          name="firstName" placeholder="First Name"
+        />
+        <input
+          name="lastName" placeholder="Last Name"
+        />
+        <input
+          name="company" placeholder="Company"
+        />
+        <input
+          name="email" type="email" placeholder="Email"
+        />
+      </div>
+      <Button onSubmit={handleFormSubmit} type="submit">Submit</Button>
+    </form>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -2,8 +2,8 @@ import "./WaitingList.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 // import Form from 'react-bootstrap/Form';
-// import { Input } from "@mui/material";
-import { FormEvent, useState } from "react";
+import { Input } from "@mui/material";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 
 interface WaitingListProps {
@@ -36,14 +36,14 @@ export const WaitingList = (props:WaitingListProps) => {
     email: '',
   });
 
-	// const handleFormInput = (e:ChangeEvent<HTMLInputElement>) => {
-	// 	const {name, value} = e.target;
+	const handleFormInput = (e:ChangeEvent<HTMLInputElement>) => {
+		const {name, value} = e.target;
 
-	// 	setFormInput(prevState => ({
-	// 		...prevState,
-	// 		[name]: value,
-	// 	}));
-	// }
+		setFormInput(prevState => ({
+			...prevState,
+			[name]: value,
+		}));
+	}
 
 	const handleFormSubmit = async (e:FormEvent) => {
 		e.preventDefault();
@@ -81,24 +81,25 @@ export const WaitingList = (props:WaitingListProps) => {
       </Modal.Header>
       <Modal.Body style={formStyles}>
 				<form name="waiting-list" method="POST" data-netlify="true">
-					{/* <div onChange={handleFormInput} className="form-container"> */}
-						<input
+					<input type="hidden" name="form-name" value="waiting-list" />
+					<div onChange={handleFormInput} className="form-container">
+						<Input
 							name="firstName" value={formInput.firstName}
 							style={{color: 'white'}} placeholder="First Name"
 						/>
-						<input
+						<Input
 							name="lastName" value={formInput.lastName}
 							style={{color: 'white'}} placeholder="Last Name"
 						/>
-						<input
+						<Input
 							name="company" value={formInput.company}
 							style={{color: 'white'}} placeholder="Company"
 						/>
-						<input
+						<Input
 							name="email" value={formInput.email} type="email"
 							style={{color: 'white'}} placeholder="Email"
 						/>
-					{/* </div> */}
+					</div>
 					<Button onSubmit={handleFormSubmit} type="submit">Submit</Button>
 				</form>
       </Modal.Body>
