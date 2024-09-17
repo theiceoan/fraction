@@ -1,5 +1,10 @@
 .our-clients-container {
 	height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .all-clients-container {
@@ -7,16 +12,20 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .client-container {
-	width: 200px;
+	width: 350px;
 	/* flex-direction: row; */
 }
 
 .client-container img {
   max-width: 100%; /* Ensures the image scales within the container */
   height: auto;
+}
+
+.text-container {
+  margin: 4em 0em;
 }
 

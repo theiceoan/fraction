@@ -8,8 +8,6 @@ import youLearn from './images/youlearn-logo-light.png';
 export const OurClients = () => {
 	return (
 		<div className='our-clients-container'>
-			<h1>OUR CLIENTS</h1>
-			<h4>Will You Join Our Innovators Who Trust Us To Turn Their Ideas Into Reality? </h4>
 			<div className='all-clients-container'>
 				<div className='client-container'>
 					<img src={bheroApp} alt='Bhero' />
@@ -20,6 +18,12 @@ export const OurClients = () => {
 				<div className='client-container'>
 					<img src={firstCapital} alt='First Capital Bank' />
 				</div>
+			</div>
+			<div className='text-container'>
+				<h1>OUR CLIENTS</h1>
+				<h4>Will You Join Our Innovators Who Trust Us To Turn Their Ideas Into Reality? </h4>
+			</div>
+			<div className='all-clients-container'>
 				<div className='client-container'>
 					<img src={sendemTransportTech} alt='Sendem Transport Technology' />
 				</div>
