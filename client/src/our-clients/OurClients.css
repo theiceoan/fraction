@@ -1,0 +1,56 @@
+.our-clients-container {
+	height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url('./graphics/lightbulb.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  /* font-family: sans-serif; */
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+/* .lightbulb-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.all-clients-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20em;
+}
+
+.client-container {
+	width: 200px;
+	/* flex-direction: row; */
+}
+
+.client-container img {
+  max-width: 100%; /* Ensures the image scales within the container */
+  height: auto;
+}
+
+.text-container {
+  margin: 4em 0em;
+  /* width: 70%; */
+}
+
+.highlight-green {
+	color: #28A745;
+}
+.highlight-gold {
+	color: #FFD700;
+}
+.highlight-blue {
+	color: #61DAFB;
+}
+

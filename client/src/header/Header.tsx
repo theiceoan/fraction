@@ -42,7 +42,7 @@ export const Header = () => {
 				<div className='header-items-container'>
 					<Nav.Link href="#our-story">Our Story</Nav.Link>
 					<Nav.Link href="#what-we-do">What We Do</Nav.Link>
-					<Nav.Link href="#our-partners">Our Partners</Nav.Link>
+					<Nav.Link href="#our-clients">Our Clients</Nav.Link>
 					<Nav.Link href="#work-with-us">Work With Us</Nav.Link>
 				</div>
 
@@ -56,7 +56,7 @@ export const Header = () => {
 					>
 						<Nav.Link onClick={handleCategoryClick} href="#our-story">Our Story</Nav.Link>
 						<Nav.Link onClick={handleCategoryClick} href="#what-we-do">What We Do</Nav.Link>
-						<Nav.Link onClick={handleCategoryClick} href="#our-partners">Our Partners</Nav.Link>
+						<Nav.Link onClick={handleCategoryClick} href="#our-clients">Our Clients</Nav.Link>
 						<Nav.Link onClick={handleCategoryClick} href="#work-with-us">Work With Us</Nav.Link>
 					</Menu>
 				</div>
