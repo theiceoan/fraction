@@ -2,6 +2,7 @@
   text-align: center;
   overflow: clip;
   height: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
