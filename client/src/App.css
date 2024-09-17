@@ -1,6 +1,7 @@
 #app-container {
   text-align: center;
   overflow: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {

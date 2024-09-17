@@ -1,17 +1,14 @@
 import './OurClients.css';
-import bheroApp from './images/bheroapp-logo.jpeg';
 import bikitaMinerals from './images/bikita-minerals-logo.png';
 import firstCapital from './images/first-capital-bank-logo.jpeg';
 import sendemTransportTech from './images/sendem-logo.jpg';
-import youLearn from './images/youlearn-logo-light.png';
+import youLearn from './images/youlearn-logo-text.png';
+import lightbulb from './graphics/lightbulb.svg';
 
 export const OurClients = () => {
 	return (
 		<div className='our-clients-container'>
 			<div className='all-clients-container'>
-				<div className='client-container'>
-					<img src={bheroApp} alt='Bhero' />
-				</div>
 				<div className='client-container'>
 					<img src={bikitaMinerals} alt='Bikita Minerals' />
 				</div>
@@ -20,8 +17,12 @@ export const OurClients = () => {
 				</div>
 			</div>
 			<div className='text-container'>
-				<h1>OUR CLIENTS</h1>
-				<h4>Will You Join Our Innovators Who Trust Us To Turn Their Ideas Into Reality? </h4>
+				<h2>
+					ACROSS ALL OF <span className='highlight-blue'>OUR PARTNERS</span>,
+					WE CONTINUE TO <span className='highlight-green'>DELIVER VALUE </span>
+					FOR <span className='highlight-gold'>OUR CLIENTS</span>
+				</h2>
+				<h4>Trusted By Leading Innovators, Will You Be Next?</h4>
 			</div>
 			<div className='all-clients-container'>
 				<div className='client-container'>
