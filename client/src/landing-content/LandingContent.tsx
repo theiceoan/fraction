@@ -35,7 +35,7 @@ export const LandingContent = () => {
 		<>
 		<div className="landing-content-container">
 			<div className='background-graphic'></div>
-			<div className='corner-graphic'></div>
+			{/* <div className='corner-graphic'></div> */}
 			<main className="main-text-container">
 				<h1>PROVIDING <span className='highlight-gold'>HIGH-QUALITY </span>
 				TECH SOLUTIONS AT A <span className='highlight-blue'> FRACTION </span>
