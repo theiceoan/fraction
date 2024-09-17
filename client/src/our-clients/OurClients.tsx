@@ -17,12 +17,12 @@ export const OurClients = () => {
 				</div>
 			</div>
 			<div className='text-container'>
-				<h2>
-					ACROSS ALL OF <span className='highlight-blue'>OUR PARTNERS</span>,
+				<h2 className='text'>
+					THROUGH ALL OF <span className='highlight-blue'>OUR PARTNERS</span>,
 					WE CONTINUE TO <span className='highlight-green'>DELIVER VALUE </span>
 					FOR <span className='highlight-gold'>OUR CLIENTS</span>
 				</h2>
-				<h4>Trusted By Leading Innovators, Will You Be Next?</h4>
+				<h3 className='text'>Trusted By Leading Innovators, Will You Be Next?</h3>
 			</div>
 			<div className='all-clients-container'>
 				<div className='client-container'>

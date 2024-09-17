@@ -10,16 +10,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30%;
+  background-color: white;
   /* font-family: sans-serif; */
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
-
-/* .lightbulb-graphic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
 
 .all-clients-container {
   display: flex;
@@ -52,5 +46,8 @@
 }
 .highlight-blue {
 	color: #61DAFB;
+}
+.text {
+  margin: 0.5em 0em;
 }
 
