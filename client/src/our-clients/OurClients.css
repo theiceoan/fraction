@@ -1,5 +1,5 @@
 .our-clients-container {
-	height: 100vh;
+	min-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -49,5 +49,47 @@
 }
 .text {
   margin: 0.5em 0em;
+}
+
+/* mobile device media queries */
+@media only screen and (max-width: 380px) {
+	.all-clients-container {
+    gap: 4em;
+  }
+  .client-container {
+    width: 100px;
+  }
+  .text-container {
+    margin: 1em 1em;
+  }
+  .our-clients-container {
+    background-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 435px) {
+	
+}
+
+
+/* media screens bigger than a phone */
+@media only screen and (min-width: 436px) and (max-width: 710px) {
+	
+}
+
+@media only screen and (min-width: 711px) and (max-width: 918px) {
+	
+}
+
+@media only screen and (min-width: 919px) and (max-width: 1180px) {
+	
+}
+
+@media only screen and (min-width: 1181px) and (max-width: 1400px) {
+	
+}
+
+@media only screen and (min-width: 1401px) {
+	
 }
 
