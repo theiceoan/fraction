@@ -51,6 +51,33 @@
   margin: 0.5em 0em;
 }
 
+@keyframes colourChange {
+  0% {
+    color: #61DAFB; /* Red */
+  }
+  33% {
+    color: #28A745; /* Green */
+  }
+  66% {
+    color: #FFD700; /* Blue */
+  }
+  100% {
+    color: #61DAFB;; /* Back to Red */
+  }
+}
+
+.colour-change {
+  animation: colourChange 30s infinite;
+}
+
+.button-like {
+  padding: 10px 20px; /* Adds space inside the element */
+  border: 2px solid rgb(33, 37, 41); /* Adds a border to the h3 tag */
+  border-radius: 5px; /* Rounds the corners */
+  background-color: rgb(33, 37, 41); /* Background color for the button */
+  color: white;
+}
+
 /* mobile device media queries */
 @media only screen and (max-width: 380px) {
 	.all-clients-container {

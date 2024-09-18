@@ -22,7 +22,7 @@ export const OurClients = () => {
 					WE CONTINUE TO <span className='highlight-green'>DELIVER VALUE </span>
 					FOR <span className='highlight-gold'>OUR CLIENTS</span>
 				</h2>
-				<h3 className='text'>Trusted By Leading Innovators, Will You Be Next?</h3>
+				<h3 className='text button-like'>Trusted By Leading <span className='colour-change'>Innovators</span>, Will You Be Next?</h3>
 			</div>
 			<div className='all-clients-container'>
 				<div className='client-container'>
