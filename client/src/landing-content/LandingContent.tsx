@@ -6,7 +6,6 @@ import leftArrow from './graphics/leftArrow.svg';
 import rightArrow from './graphics/rightArrow.svg';
 import { MouseEvent, useEffect, useState } from 'react';
 import { benefitsOfOutsourcing } from './static/benefitsOfOutsourcing';
-import { WaitingList } from '../waiting-list/WaitingList';
 
 interface LandingContentProps {
 	openModal: () => void;
