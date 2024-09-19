@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './LandingContent.css';
-import logo from './graphics/logo.svg';
+import logo from '../logo-graphics/mobile-logo.png';
 import leftArrow from './graphics/leftArrow.svg';
 import rightArrow from './graphics/rightArrow.svg';
 import { MouseEvent, useEffect, useState } from 'react';
@@ -75,6 +75,7 @@ export const LandingContent = () => {
 						<Card.Img
 							src={logo}
 							width="10px"
+							style={{width: 'inherit'}}
 							alt={benefitsOfOutsourcing[currentBenefit].title}
 							className="benefit-svg"
 						/>

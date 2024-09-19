@@ -16,16 +16,49 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /* animation: skewRotate 4s ease-in-out infinite; */
+		/* animation: fadeTranslate 5s ease-in-out infinite; */
   }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @keyframes skewRotate {
+  0% {
+    transform: rotate(0deg) skew(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(5deg) skew(-5deg);
+  }
+  50% {
+    transform: rotate(-5deg) skew(10deg);
+  }
+  75% {
+    transform: rotate(3deg) skew(-3deg);
+  }
+  100% {
+    transform: rotate(0deg) skew(0deg);
+  }
+} */
+
+@keyframes fadeTranslate {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  25% {
+    opacity: 0.9;
+    transform: translateX(-10px) translateY(-5px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(5px) translateY(10px);
+  }
+  75% {
+    opacity: 0.85;
+    transform: translateX(-7px) translateY(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px);
   }
 }
 
