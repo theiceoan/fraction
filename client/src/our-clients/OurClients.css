@@ -1,5 +1,5 @@
 .our-clients-container {
-	height: 100vh;
+	min-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -49,5 +49,74 @@
 }
 .text {
   margin: 0.5em 0em;
+}
+
+@keyframes colourChange {
+  0% {
+    color: #61DAFB; /* Red */
+  }
+  33% {
+    color: #28A745; /* Green */
+  }
+  66% {
+    color: #FFD700; /* Blue */
+  }
+  100% {
+    color: #61DAFB;; /* Back to Red */
+  }
+}
+
+.colour-change {
+  animation: colourChange 30s infinite;
+}
+
+.button-like {
+  padding: 10px 20px; /* Adds space inside the element */
+  border: 2px solid rgb(33, 37, 41); /* Adds a border to the h3 tag */
+  border-radius: 5px; /* Rounds the corners */
+  background-color: rgb(33, 37, 41); /* Background color for the button */
+  color: white;
+}
+
+/* mobile device media queries */
+@media only screen and (max-width: 380px) {
+	.all-clients-container {
+    gap: 4em;
+  }
+  .client-container {
+    width: 100px;
+  }
+  .text-container {
+    margin: 1em 1em;
+  }
+  .our-clients-container {
+    background-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 435px) {
+	
+}
+
+
+/* media screens bigger than a phone */
+@media only screen and (min-width: 436px) and (max-width: 710px) {
+	
+}
+
+@media only screen and (min-width: 711px) and (max-width: 918px) {
+	
+}
+
+@media only screen and (min-width: 919px) and (max-width: 1180px) {
+	
+}
+
+@media only screen and (min-width: 1181px) and (max-width: 1400px) {
+	
+}
+
+@media only screen and (min-width: 1401px) {
+	
 }
 
