@@ -9,8 +9,12 @@ function App() {
     <div id="app-container">
       <Header />
       <main id='page-wrap'>
-        <LandingContent />
-        <OurClients />
+        <section id="our-story">
+          <LandingContent />
+        </section>
+        <section id="our-clients">
+          <OurClients />
+        </section>
       </main>
     </div>
   );

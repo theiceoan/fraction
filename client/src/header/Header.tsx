@@ -6,6 +6,8 @@ import { stack as Menu, State } from 'react-burger-menu';
 import './Header.css';
 import { MouseEvent, useEffect, useRef, useState } from 'react';
 
+type Section = '#our-story' | '#what-we-do' | '#our-clients' | '#work-with-us';
+
 export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const menuRef = useRef<HTMLDivElement>(null);
@@ -13,9 +15,17 @@ export const Header = () => {
   const handleStateChange = (state:State) => {
 		setIsOpen(state.isOpen)
 	};
-	const handleCategoryClick = (e:MouseEvent) => {
+	const handleCategoryClick = (e:MouseEvent, sectionId: Section) => {
 		e.stopPropagation()
 		setIsOpen(false)
+
+		const section = document.querySelector(sectionId);
+		if (section) {
+			section.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			})
+		}
 	}
 	const handleClickOutside = (e:Event) => {
 		if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
@@ -40,10 +50,10 @@ export const Header = () => {
 				</Navbar.Brand>
 
 				<div className='header-items-container'>
-					<Nav.Link href="#our-story">Our Story</Nav.Link>
-					<Nav.Link href="#what-we-do">What We Do</Nav.Link>
-					<Nav.Link href="#our-clients">Our Clients</Nav.Link>
-					<Nav.Link href="#work-with-us">Work With Us</Nav.Link>
+					<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-story')} href="#our-story">Our Story</Nav.Link>
+					<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
+					<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-clients')} href="#our-clients">Our Clients</Nav.Link>
+					<Nav.Link onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Nav.Link>
 				</div>
 
 				<div id='sidepanel-container' ref={menuRef}>
@@ -54,10 +64,10 @@ export const Header = () => {
 						onStateChange={handleStateChange}
 						isOpen={isOpen}
 					>
-						<Nav.Link onClick={handleCategoryClick} href="#our-story">Our Story</Nav.Link>
-						<Nav.Link onClick={handleCategoryClick} href="#what-we-do">What We Do</Nav.Link>
-						<Nav.Link onClick={handleCategoryClick} href="#our-clients">Our Clients</Nav.Link>
-						<Nav.Link onClick={handleCategoryClick} href="#work-with-us">Work With Us</Nav.Link>
+						<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-story')} href="#our-story">Our Story</Nav.Link>
+						<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
+						<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-clients')} href="#our-clients">Our Clients</Nav.Link>
+						<Nav.Link onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Nav.Link>
 					</Menu>
 				</div>
 			</Container>
