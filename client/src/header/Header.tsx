@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './graphics/logo.svg';
-import { push as Menu, State } from 'react-burger-menu';
+import { stack as Menu, State } from 'react-burger-menu';
 import './Header.css';
 import { MouseEvent, useEffect, useRef, useState } from 'react';
 
