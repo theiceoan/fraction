@@ -22,7 +22,7 @@ function App() {
       <main id='page-wrap'>
         <section id="our-story">
           <LandingContent openModal={handleOpenModal} />
-          <WaitingList show={modalShow} onHide={() => setModalShow(false)} />
+          <WaitingList show={modalShow} onHide={handleCloseModal} />
         </section>
         <section id="our-clients">
           <OurClients />
