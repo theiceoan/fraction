@@ -3,7 +3,6 @@ import bikitaMinerals from './images/bikita-minerals-logo.png';
 import firstCapital from './images/first-capital-bank-logo.jpeg';
 import sendemTransportTech from './images/sendem-logo.jpg';
 import youLearn from './images/youlearn-logo-text.png';
-import lightbulb from './graphics/lightbulb.svg';
 
 export const OurClients = () => {
 	return (
