@@ -9,7 +9,7 @@
   background-image: url('./graphics/lightbulb.svg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 40%;
   background-color: white;
   /* font-family: sans-serif; */
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
@@ -35,6 +35,7 @@
 
 .text-container {
   margin: 4em 0em;
+  width: 70%;
   /* width: 70%; */
 }
 
@@ -88,6 +89,7 @@
   }
   .text-container {
     margin: 1em 1em;
+    width: unset;
   }
   .our-clients-container {
     background-size: 100%;
@@ -95,28 +97,83 @@
 }
 
 @media only screen and (min-width: 381px) and (max-width: 435px) {
-	
+	.all-clients-container {
+    gap: 4em;
+  }
+  .client-container {
+    width: 120px;
+  }
+  .text-container {
+    margin: 5em 1em;
+    width: unset;
+  }
+  .our-clients-container {
+    background-size: 100%;
+  }
 }
 
 
 /* media screens bigger than a phone */
 @media only screen and (min-width: 436px) and (max-width: 710px) {
-	
+	.all-clients-container {
+    gap: 10em;
+  }
+  .client-container {
+    width: 160px;
+  }
+  .text-container {
+    margin: 5em 1em;
+    width: unset;
+  }
+  .our-clients-container {
+    background-size: 50%;
+  }
 }
 
 @media only screen and (min-width: 711px) and (max-width: 918px) {
-	
+	.all-clients-container {
+    gap: 20em;
+  }
+  .client-container {
+    width: 160px;
+  }
+  .text-container {
+    margin: 5em 2em;
+    width: unset;
+  }
+  .our-clients-container {
+    background-size: 50%;
+  }
 }
 
 @media only screen and (min-width: 919px) and (max-width: 1180px) {
-	
+	.all-clients-container {
+    gap: 20em;
+  }
+  .client-container {
+    width: 160px;
+  }
+  .text-container {
+    margin: 5em 2em;
+    width: 80%;
+  }
+  .our-clients-container {
+    background-size: 50%;
+  }
 }
 
 @media only screen and (min-width: 1181px) and (max-width: 1400px) {
-	
+	.all-clients-container {
+    gap: 20em;
+  }
+  .client-container {
+    width: 160px;
+  }
+  .text-container {
+    margin: 5em 2em;
+    width: 80%;
+  }
+  .our-clients-container {
+    background-size: 40%;
+  }
 }
-
-@media only screen and (min-width: 1401px) {
-	
-}
-
