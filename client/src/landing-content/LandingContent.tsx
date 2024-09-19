@@ -8,9 +8,13 @@ import { MouseEvent, useEffect, useState } from 'react';
 import { benefitsOfOutsourcing } from './static/benefitsOfOutsourcing';
 import { WaitingList } from '../waiting-list/WaitingList';
 
-export const LandingContent = () => {
+interface LandingContentProps {
+	openModal: () => void;
+}
+
+export const LandingContent = ({ openModal }:LandingContentProps) => {
 	const [currentBenefit, setCurrentBenefit] = useState<number>(0);
-	const [modalShow, setModalShow] = useState<boolean>(false);
+	// const [modalShow, setModalShow] = useState<boolean>(false);
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -37,7 +41,7 @@ export const LandingContent = () => {
 			<div className='background-graphic'></div>
 			{/* <div className='corner-graphic'></div> */}
 			<main className="main-text-container">
-				<h1>PROVIDING <span className='highlight-gold'>HIGH-QUALITY </span>
+				<h1>DEVELOPING YOUR <span className='highlight-gold'>HIGH-QUALITY </span>
 				TECH SOLUTIONS AT A <span className='highlight-blue'> FRACTION </span>
 				OF THE <span className='highlight-green'>COST</span>
 				</h1>
@@ -48,7 +52,7 @@ export const LandingContent = () => {
 			<div className='waiting-list-button-container'>
 				<Button
 					size='lg' variant='outline-info'
-					onClick={() => setModalShow(true)}>
+					onClick={openModal}>
 						Interested? Join Our Waiting List
 				</Button>
 			</div>
@@ -83,7 +87,6 @@ export const LandingContent = () => {
 				</Card>
 			</main>
 		</div>
-		<WaitingList show={modalShow} onHide={() => setModalShow(false)} />
 		</>
 	)
 }

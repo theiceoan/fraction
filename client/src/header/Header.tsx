@@ -8,7 +8,11 @@ import { MouseEvent, useEffect, useRef, useState } from 'react';
 
 type Section = '#our-story' | '#what-we-do' | '#our-clients' | '#work-with-us';
 
-export const Header = () => {
+interface HeaderProps {
+	openModal: () => void;
+}
+
+export const Header = ({ openModal }:HeaderProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const menuRef = useRef<HTMLDivElement>(null);
 
@@ -19,12 +23,16 @@ export const Header = () => {
 		e.stopPropagation()
 		setIsOpen(false)
 
-		const section = document.querySelector(sectionId);
-		if (section) {
-			section.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			})
+		if (sectionId === '#work-with-us') {
+			openModal();
+		} else {
+			const section = document.querySelector(sectionId);
+			if (section) {
+				section.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				})
+			}
 		}
 	}
 	const handleClickOutside = (e:Event) => {

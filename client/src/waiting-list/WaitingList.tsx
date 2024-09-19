@@ -6,7 +6,7 @@ import { Input } from "@mui/material";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 
-interface WaitingListProps {
+export interface WaitingListProps {
 	show: boolean
 	onHide: () => void;
 }
