@@ -12,27 +12,27 @@ interface LandingContentProps {
 }
 
 export const LandingContent = ({ openModal }:LandingContentProps) => {
-	const [currentBenefit, setCurrentBenefit] = useState<number>(0);
+	// const [currentBenefit, setCurrentBenefit] = useState<number>(0);
 	// const [modalShow, setModalShow] = useState<boolean>(false);
 
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			setCurrentBenefit(prevBenefit => (prevBenefit + 1) % benefitsOfOutsourcing.length);
-		}, 30000)
+	// useEffect(() => {
+	// 	const intervalId = setInterval(() => {
+	// 		setCurrentBenefit(prevBenefit => (prevBenefit + 1) % benefitsOfOutsourcing.length);
+	// 	}, 30000)
 
-		return () => clearInterval(intervalId);
-	})
+	// 	return () => clearInterval(intervalId);
+	// })
 
-	const handleBenefitClick = (e:MouseEvent<HTMLElement>) => {
-		const className = e.currentTarget.getAttribute('class');
-		if (className === 'left-arrow') {
-			setCurrentBenefit(prevBenefit =>
-				(prevBenefit - 1 + benefitsOfOutsourcing.length) % benefitsOfOutsourcing.length);
-		} else if (className === 'right-arrow') {
-			setCurrentBenefit(prevBenefit =>
-				(prevBenefit + 1) % benefitsOfOutsourcing.length);
-		}
-	}
+	// const handleBenefitClick = (e:MouseEvent<HTMLElement>) => {
+	// 	const className = e.currentTarget.getAttribute('class');
+	// 	if (className === 'left-arrow') {
+	// 		setCurrentBenefit(prevBenefit =>
+	// 			(prevBenefit - 1 + benefitsOfOutsourcing.length) % benefitsOfOutsourcing.length);
+	// 	} else if (className === 'right-arrow') {
+	// 		setCurrentBenefit(prevBenefit =>
+	// 			(prevBenefit + 1) % benefitsOfOutsourcing.length);
+	// 	}
+	// }
 
 	return (
 		<div className="landing-content-container">
@@ -55,34 +55,21 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 				</Button>
 			</div>
 			<main className='container-to-be-renamed'>
-				<Card bg='light' text='black' style={{ opacity: '0.7'}}>
-					<Card.Body>
-						<span className='arrows'>
-							<img
-								className='left-arrow'
-								onClick={handleBenefitClick}
-								src={leftArrow}
-								alt="left arrow"
+				{benefitsOfOutsourcing.map((benefit, index) => (
+					<Card bg='light' text='black' style={{ opacity: '0.7'}} key={benefit.id}>
+						<Card.Body>
+							<Card.Title>{benefit.title}</Card.Title>
+							<Card.Text>{benefit.content}</Card.Text>
+							<Card.Img
+								src={logo}
+								width="10px"
+								style={{width: 'inherit'}}
+								alt={benefit.title}
+								className="benefit-svg"
 							/>
-							<img
-								className='right-arrow'
-								onClick={handleBenefitClick}
-								src={rightArrow}
-								alt="right arrow"
-							/>
-						</span>
-						{/* <span className='right-arrow'></span> */}
-						<Card.Title>{benefitsOfOutsourcing[currentBenefit].title}</Card.Title>
-						<Card.Text>{benefitsOfOutsourcing[currentBenefit].content}</Card.Text>
-						<Card.Img
-							src={logo}
-							width="10px"
-							style={{width: 'inherit'}}
-							alt={benefitsOfOutsourcing[currentBenefit].title}
-							className="benefit-svg"
-						/>
-					</Card.Body>
-				</Card>
+						</Card.Body>
+					</Card>
+				))}
 			</main>
 		</div>
 	)
