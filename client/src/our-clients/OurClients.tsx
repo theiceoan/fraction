@@ -15,7 +15,7 @@ export const OurClients = () => {
 					<img src={firstCapital} alt='First Capital Bank' />
 				</div>
 			</div>
-			<div className='text-container'>
+			<div className='clients-text-container'>
 				<h2 className='text'>
 					THROUGH ALL OF <span className='highlight-blue'>OUR PARTNERS</span>,
 					WE CONTINUE TO <span className='highlight-green'>DELIVER VALUE </span>
