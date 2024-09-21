@@ -6,6 +6,7 @@ import leftArrow from './graphics/leftArrow.svg';
 import rightArrow from './graphics/rightArrow.svg';
 import { MouseEvent, useEffect, useState } from 'react';
 import { benefitsOfOutsourcing } from './static/benefitsOfOutsourcing';
+import { Line } from './Line';
 
 interface LandingContentProps {
 	openModal: () => void;
@@ -38,12 +39,12 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 		<div className="landing-content-container">
 			{/* <div className='background-graphic'></div> */}
 			{/* <div className='corner-graphic'></div> */}
-			<main className="main-text-container">
+			<main className="landing-text-container">
 				<h1>DEVELOPING YOUR <span className='highlight-gold'>HIGH-QUALITY </span>
 				TECH SOLUTIONS AT A <span className='highlight-blue'> FRACTION </span>
 				OF THE <span className='highlight-green'>COST</span>
 				</h1>
-				<h4 style={{paddingBottom: '1em'}}>Tailored solutions that solve your problems
+				<h4>Tailored solutions that solve your problems
 					and let you focus on delivering value and impact
 				</h4>
 			</main>
@@ -53,6 +54,11 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 					onClick={openModal}>
 						Interested? Join Our Waiting List
 				</Button>
+			</div>
+			<div className='landing-text-container benefits'>
+				<Line />
+				<h1>BENEFITS OF OUTSOURCING WITH US</h1>
+				<Line />
 			</div>
 			<main className='benefits-container'>
 				{benefitsOfOutsourcing.map((benefit) => (

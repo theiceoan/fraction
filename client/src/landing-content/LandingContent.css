@@ -42,31 +42,40 @@
 	background-color: rgb(33, 37, 41);
 }
 
-.main-text-container, .benefits-container {
+.landing-text-container, .benefits-container {
 	width: 80%;
 	/* flex: 1; */
 	/* margin-top: 10%; */
-	padding: 4em 2em;
+	/* padding: 2em; */
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	/* height: 100vh; */
 	/* padding: 10px 12px; */
 }
 
+.landing-text-container.benefits {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
 .benefits-container {
 	display: flex;
 	flex-direction: row;
+	margin-top: 0.5em;
+	
 }
 
 .waiting-list-button-container {
-	/* align-items: center; */
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* margin-top: 10%; */
+	margin: 2.5em 0em;
 	z-index: 1;
 }
 
-.main-text-container {
+.landing-text-container {
 	color: white;
 }
 
@@ -117,7 +126,7 @@
 		background-size: 60%;
 	}
 
-	.main-text-container, .benefits-container {
+	.landing-text-container, .benefits-container {
 		margin-top: 5%;
 		padding: 0.5em;
 		width: 100vw;
@@ -141,7 +150,7 @@
 		background-size: 70%;
 	}
 
-	.main-text-container, .benefits-container {
+	.landing-text-container, .benefits-container {
 		margin-top: 25%;
 		padding: 1em;
 		width: 100vw;
@@ -175,7 +184,7 @@
 		background-size: 70%;
 	}
 
-	.main-text-container, .benefits-container {
+	.landing-text-container, .benefits-container {
 		margin-top: 25%;
 		padding: 1em;
 		width: 100vw;
