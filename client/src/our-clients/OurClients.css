@@ -3,14 +3,14 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   position: relative;
-  background-image: url('./graphics/lightbulb.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 40%;
-  background-color: white;
+  /* background-image: url('./graphics/lightbulb.svg'); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: 40%; */
+  /* background-color: rgb(33, 37, 41); */
   /* font-family: sans-serif; */
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
@@ -20,11 +20,16 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20em;
+  gap: 10em;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1em solid black;
+  /* padding-bottom: 2em; */
+  margin-bottom: 3em;
 }
 
 .client-container {
-	width: 200px;
+	width: 150px;
 	/* flex-direction: row; */
 }
 
@@ -33,10 +38,27 @@
   height: auto;
 }
 
-.clients-text-container {
-  margin: 4em 0em;
+.clients-text-container, .testimonials {
+  /* margin: 4em 0em; */
   width: 70%;
   /* width: 70%; */
+}
+
+.testimonials-container {
+  margin: 2em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-img {
+  height: 10em;
+}
+
+.testimonials-text {
+  display: flex;
+  flex-direction: row;
 }
 
 .highlight-green {
@@ -72,10 +94,10 @@
 }
 
 .button-like {
-  padding: 10px 20px; /* Adds space inside the element */
-  border: 2px solid rgb(33, 37, 41); /* Adds a border to the h3 tag */
-  border-radius: 5px; /* Rounds the corners */
-  background-color: rgb(33, 37, 41); /* Background color for the button */
+  padding: 10px 20px;
+  border: 2px solid rgb(99, 102, 105);
+  border-radius: 5px;
+  background-color: rgb(99, 102, 105);
   color: white;
 }
 

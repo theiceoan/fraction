@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import './LandingContent.css';
 import logo from '../logo-graphics/mobile-logo.png';
 import { benefitsOfOutsourcing } from './static/benefitsOfOutsourcing';
-import { Line } from './Line';
+import { Line } from '../Line';
 
 interface LandingContentProps {
 	openModal: () => void;
