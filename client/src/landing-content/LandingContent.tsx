@@ -2,9 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './LandingContent.css';
 import logo from '../logo-graphics/mobile-logo.png';
-import leftArrow from './graphics/leftArrow.svg';
-import rightArrow from './graphics/rightArrow.svg';
-import { MouseEvent, useEffect, useState } from 'react';
 import { benefitsOfOutsourcing } from './static/benefitsOfOutsourcing';
 import { Line } from './Line';
 
@@ -13,27 +10,6 @@ interface LandingContentProps {
 }
 
 export const LandingContent = ({ openModal }:LandingContentProps) => {
-	// const [currentBenefit, setCurrentBenefit] = useState<number>(0);
-	// const [modalShow, setModalShow] = useState<boolean>(false);
-
-	// useEffect(() => {
-	// 	const intervalId = setInterval(() => {
-	// 		setCurrentBenefit(prevBenefit => (prevBenefit + 1) % benefitsOfOutsourcing.length);
-	// 	}, 30000)
-
-	// 	return () => clearInterval(intervalId);
-	// })
-
-	// const handleBenefitClick = (e:MouseEvent<HTMLElement>) => {
-	// 	const className = e.currentTarget.getAttribute('class');
-	// 	if (className === 'left-arrow') {
-	// 		setCurrentBenefit(prevBenefit =>
-	// 			(prevBenefit - 1 + benefitsOfOutsourcing.length) % benefitsOfOutsourcing.length);
-	// 	} else if (className === 'right-arrow') {
-	// 		setCurrentBenefit(prevBenefit =>
-	// 			(prevBenefit + 1) % benefitsOfOutsourcing.length);
-	// 	}
-	// }
 
 	return (
 		<div className="landing-content-container">
