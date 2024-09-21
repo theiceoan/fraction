@@ -54,12 +54,10 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 						Interested? Join Our Waiting List
 				</Button>
 			</div>
-			<main className='container-to-be-renamed'>
-				{benefitsOfOutsourcing.map((benefit, index) => (
+			<main className='benefits-container'>
+				{benefitsOfOutsourcing.map((benefit) => (
 					<Card bg='light' text='black' style={{ opacity: '0.7'}} key={benefit.id}>
 						<Card.Body>
-							<Card.Title>{benefit.title}</Card.Title>
-							<Card.Text>{benefit.content}</Card.Text>
 							<Card.Img
 								src={logo}
 								width="10px"
@@ -67,6 +65,8 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 								alt={benefit.title}
 								className="benefit-svg"
 							/>
+							<Card.Title>{benefit.title}</Card.Title>
+							<Card.Text>{benefit.content}</Card.Text>
 						</Card.Body>
 					</Card>
 				))}
