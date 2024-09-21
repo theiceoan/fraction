@@ -35,9 +35,8 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 	}
 
 	return (
-		<>
 		<div className="landing-content-container">
-			<div className='background-graphic'></div>
+			{/* <div className='background-graphic'></div> */}
 			{/* <div className='corner-graphic'></div> */}
 			<main className="main-text-container">
 				<h1>DEVELOPING YOUR <span className='highlight-gold'>HIGH-QUALITY </span>
@@ -86,6 +85,5 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 				</Card>
 			</main>
 		</div>
-		</>
 	)
 }
