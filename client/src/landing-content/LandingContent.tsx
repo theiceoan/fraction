@@ -33,7 +33,7 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 			</div>
 			<div className='landing-text-container benefits'>
 				<Line />
-				<h1>BENEFITS OF OUTSOURCING WITH US</h1>
+				<h2>BENEFITS OF OUTSOURCING WITH US</h2>
 				<Line />
 			</div>
 			<main className='benefits-container'>
