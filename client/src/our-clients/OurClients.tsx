@@ -7,7 +7,11 @@ import sendemTransportTech from './images/sendem-logo.jpg';
 import youLearn from './images/youlearn-logo-text.png';
 import logo from '../logo-graphics/horizontal-logo.png';
 
-export const OurClients = () => {
+interface OurClientsProps {
+	openModal: () => void;
+}
+
+export const OurClients = ({ openModal }:OurClientsProps) => {
 	return (
 		<div className='our-clients-container'>
 			<div className='all-clients-container'>
@@ -54,7 +58,13 @@ export const OurClients = () => {
 									And Want To Hear What All Our
 									Innovators Think About Us?
 								</Card.Text>
-								<Button size='lg' variant='outline-info'>Find Out More</Button>
+								<Button
+									onClick={openModal}
+									size='lg'
+									variant='outline-info'
+								>
+									Find Out More
+								</Button>
 							</Card.Body>
 						</Card>
 				</div>

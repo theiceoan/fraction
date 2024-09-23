@@ -25,7 +25,7 @@ function App() {
           <WaitingList show={modalShow} onHide={handleCloseModal} />
         </section>
         <section id="our-clients">
-          <OurClients />
+          <OurClients openModal={handleOpenModal} />
         </section>
       </main>
     </div>
