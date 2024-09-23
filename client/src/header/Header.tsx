@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../logo-graphics/mobile-logo.png';
@@ -62,7 +63,7 @@ export const Header = ({ openModal }:HeaderProps) => {
 					<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-story')} href="#our-story">Our Story</Nav.Link>
 					<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
 					<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-clients')} href="#our-clients">Our Clients</Nav.Link>
-					<Nav.Link onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Nav.Link>
+					<Button variant='outline-info' onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Button>
 				</div>
 
 				<div id='sidepanel-container' ref={menuRef}>
@@ -76,7 +77,7 @@ export const Header = ({ openModal }:HeaderProps) => {
 						<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-story')} href="#our-story">Our Story</Nav.Link>
 						<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
 						<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-clients')} href="#our-clients">Our Clients</Nav.Link>
-						<Nav.Link onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Nav.Link>
+						<Button variant='outline-info' onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Button>
 					</Menu>
 				</div>
 			</Container>
