@@ -30,7 +30,8 @@ export const Header = ({ openModal }:HeaderProps) => {
 			if (section) {
 				section.scrollIntoView({
 					behavior: 'smooth',
-					block: 'start'
+					// block: 'start',
+					// inline: 'start'
 				})
 			}
 		}
