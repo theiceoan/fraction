@@ -11,7 +11,6 @@ interface WhatWeDoProps {
 export const WhatWeDo = ({ openModal }: WhatWeDoProps) => {
 	return (
 		<div className='what-we-do-container'>
-			<div className='what-we-do-content'>
 				<div className='what-we-do-text-container'>
 					<div className='title-with-lines'>
 						<Line />
@@ -19,8 +18,8 @@ export const WhatWeDo = ({ openModal }: WhatWeDoProps) => {
 						<Line />
 					</div>
 					<h4>
-						We're Built To Deliver Software Projects For All
-						Industries With A Cutting-Edge, Versatile Technology Stack
+						We're Built To <span className='highlight-green'>Deliver Software Projects</span> For All
+						Industries With A <span className='highlight-gold'>Cutting-Edge, Versatile</span> Technology Stack
 					</h4>
 				</div>
 				<div className='what-we-do-details-container'>
@@ -31,7 +30,6 @@ export const WhatWeDo = ({ openModal }: WhatWeDoProps) => {
 									<Card.Img
 										src={item.svgPath}
 										width="10px"
-										style={{ width: 'inherit' }}
 										alt={item.title}
 										className="what-we-do-svg"
 									/>
@@ -41,15 +39,14 @@ export const WhatWeDo = ({ openModal }: WhatWeDoProps) => {
 						</div>
 					))}
 				</div>
-			</div>
-			<div className='waiting-list-button-container'>
-				<Button
-					size='lg'
-					variant='outline-info'
-					onClick={openModal}>
-					Want To Know If We Can Turn Your Ideas Into Reality?
-				</Button>
-			</div>
+				<div className='waiting-list-button-container'>
+					<Button
+						size='lg'
+						variant='outline-info'
+						onClick={openModal}>
+						Want To Know If We Can Turn Your Ideas Into Reality?
+					</Button>
+				</div>
 		</div>
 	);
 };
