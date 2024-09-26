@@ -4,6 +4,7 @@ import { Header } from './header/Header';
 import { LandingContent } from './landing-content/LandingContent';
 import { OurClients } from './our-clients/OurClients';
 import { WaitingList } from './waiting-list/WaitingList';
+import { WhatWeDo } from './what-we-do/WhatWeDo';
 
 function App() {
   const [modalShow, setModalShow] = useState<boolean>(false);
@@ -26,6 +27,9 @@ function App() {
         </section>
         <section id="our-clients">
           <OurClients openModal={handleOpenModal} />
+        </section>
+        <section id='what-we-do'>
+          <WhatWeDo openModal={handleOpenModal} />
         </section>
       </main>
     </div>

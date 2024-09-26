@@ -61,8 +61,8 @@ export const Header = ({ openModal }:HeaderProps) => {
 
 				<div className='header-items-container'>
 					<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-story')} href="#our-story">Our Story</Nav.Link>
-					<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
 					<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-clients')} href="#our-clients">Our Clients</Nav.Link>
+					<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
 					<Button variant='outline-info' onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Button>
 				</div>
 
@@ -75,8 +75,8 @@ export const Header = ({ openModal }:HeaderProps) => {
 						isOpen={isOpen}
 					>
 						<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-story')} href="#our-story">Our Story</Nav.Link>
-						<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
 						<Nav.Link onClick={(e) => handleCategoryClick(e, '#our-clients')} href="#our-clients">Our Clients</Nav.Link>
+						<Nav.Link onClick={(e) => handleCategoryClick(e, '#what-we-do')} href="#what-we-do">What We Do</Nav.Link>
 						<Button variant='outline-info' onClick={(e) => handleCategoryClick(e, '#work-with-us')} href="#work-with-us">Work With Us</Button>
 					</Menu>
 				</div>
