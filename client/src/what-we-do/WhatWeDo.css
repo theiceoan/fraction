@@ -1,3 +1,51 @@
 .what-we-do-container {
 	background-color: rgb(33, 37, 41);
+	display: flex;
+	flex-direction: column; /* Change to column to stack content vertically */
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.what-we-do-content {
+	display: flex; /* Allow text and card items to be inline */
+	flex-direction: row; /* Keep text and card items in a row */
+	justify-content: center; /* Center them horizontally */
+	align-items: center; /* Align items to the start */
+	width: 100%; /* Full width to use available space */
+	padding: 5em 0em;
+}
+
+.what-we-do-text-container {
+	color: white;
+	width: 30%;
+	padding: 0em 2em;
+}
+
+.item-container {
+	width: 15em;
+}
+
+.what-we-do-svg {
+	height: 5vmin;
+}
+
+.what-we-do-details-container {
+	width: 70%;
+	display: flex;
+	flex-direction: row; /* Maintain row layout for card items */
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.title-with-lines {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 1em;
+}
+
+.waiting-list-button-container {
+	text-align: center;
 }
