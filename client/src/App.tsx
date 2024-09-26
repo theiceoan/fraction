@@ -29,7 +29,7 @@ function App() {
           <OurClients openModal={handleOpenModal} />
         </section>
         <section id='what-we-do'>
-          <WhatWeDo />
+          <WhatWeDo openModal={handleOpenModal} />
         </section>
       </main>
     </div>
