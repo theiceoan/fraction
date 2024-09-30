@@ -30,11 +30,11 @@ export const OurClients = ({ openModal }:OurClientsProps) => {
 			</div>
 			<div className='clients-text-container button-like'>
 				<h2 className='text'>
-					THROUGH ALL OF <span className='highlight-blue'>OUR PARTNERS</span>,
-					WE CONTINUE TO <span className='highlight-green'>DELIVER VALUE </span>
-					FOR <span className='highlight-gold'>OUR CLIENTS</span>
+					THROUGH ALL OF OUR PARTNERS,
+					WE CONTINUE TO DELIVER VALUE
+					FOR OUR CLIENTS
 				</h2>
-				<h3 className='text'>Trusted By Leading <span className='colour-change'>Innovators</span>, Will You Be Next?</h3>
+				<h4 className='text'>Trusted By Leading <span className='colour-change'>Innovators</span>, Will You Be Next?</h4>
 			</div>
 			<div className='testimonials-container'>
 				<div className='testimonials-text'>

@@ -16,13 +16,16 @@ export const LandingContent = ({ openModal }:LandingContentProps) => {
 			{/* <div className='background-graphic'></div> */}
 			{/* <div className='corner-graphic'></div> */}
 			<main className="landing-text-container">
-				<h1>DEVELOPING YOUR <span className='highlight-gold'>HIGH-QUALITY </span>
+				<h1><b> DEVELOPING YOUR HIGH-QUALITY
 				TECH SOLUTIONS AT A <span className='highlight-blue'> FRACTION </span>
-				OF THE <span className='highlight-green'>COST</span>
-				</h1>
-				<h4>Tailored solutions that solve your problems
-					and let you focus on delivering value and impact
-				</h4>
+				OF THE COST
+				</b></h1>
+				<div className='invisible-in-mobile'>
+					<Line />
+					<h4>Tailored solutions that solve your problems
+						and let you focus on delivering value and impact
+					</h4>
+				</div>
 			</main>
 			<div className='waiting-list-button-container'>
 				<Button
