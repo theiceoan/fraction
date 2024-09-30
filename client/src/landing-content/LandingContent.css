@@ -132,6 +132,10 @@
 		width: 90%;
 	}
 
+	.waiting-list-button-container {
+		margin: 0;
+	}
+
 	.landing-text-container {
 		padding-top: 2em;
 	}
@@ -142,7 +146,7 @@
 		margin: 0.5em 0em 1em 0em;
 	}
 
-	.benefit-svg {
+	.benefit-svg, .invisible-in-mobile {
 		display: none;
 	}
 }
@@ -159,11 +163,15 @@
 		width: 90%;
 	}
 
+	.waiting-list-button-container {
+		margin: 0;
+	}
+
 	.landing-text-container {
 		padding-top: 2em;
 	}
 
-	.benefit-svg {
+	.benefit-svg, .invisible-in-mobile {
 		display: none;
 	}
 }
@@ -183,6 +191,6 @@
 	}
 
 	.waiting-list-button-container {
-		margin: 1em 0em;
+		margin: 0;
 	}
 }
