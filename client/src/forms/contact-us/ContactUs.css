@@ -1,0 +1,17 @@
+.contact-us-container {
+	background-color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+	justify-content: center;
+	align-items: center;
+  gap: 1rem; /* Space between the inputs */
+}
+
+.contact-us.button {
+  margin: 1em 0em;
+  display: flex;
+  justify-content: center;
+}
