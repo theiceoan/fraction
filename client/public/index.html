@@ -46,6 +46,21 @@
       </div>
       <Button onSubmit={handleFormSubmit} type="submit">Submit</Button>
     </form>
+    <form name="contact-us" netlify netlify-honeypot="bot-field" hidden>
+      <div onChange={handleFormInput} className="form-container">
+        <input
+          name="firstName" placeholder="First Name"
+        />
+        <input
+          name="lastName" placeholder="Last Name"
+        />
+        <input
+          name="email" type="email" placeholder="Email"
+        />
+        <textarea name="message" placeholder="Message"></textarea>
+      </div>
+      <Button onSubmit={handleFormSubmit} type="submit">Submit</Button>
+    </form>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

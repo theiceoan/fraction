@@ -1,9 +1,6 @@
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../logo-graphics/mobile-logo.png';
-import { stack as Menu, State } from 'react-burger-menu';
 import './Footer.css';
 
 export const Footer = () => {
