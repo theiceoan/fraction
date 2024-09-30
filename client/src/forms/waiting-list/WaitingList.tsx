@@ -33,11 +33,12 @@ export const WaitingList = (props:WaitingListProps) => {
     firstName: '',
     lastName: '',
     company: '',
-    email: '',
+    email: ''
   });
 
 	const handleFormInput = (e:ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = e.target;
+		console.log(value);
 
 		setFormInput(prevState => ({
 			...prevState,
@@ -84,19 +85,19 @@ export const WaitingList = (props:WaitingListProps) => {
 					<input type="hidden" name="form-name" value="waiting-list" />
 					<div onChange={handleFormInput} className="form-container">
 						<Input
-							name="wl-firstName" value={formInput.firstName}
+							name="firstName" value={formInput.firstName}
 							style={{color: 'white'}} placeholder="First Name"
 						/>
 						<Input
-							name="wl-lastName" value={formInput.lastName}
+							name="lastName" value={formInput.lastName}
 							style={{color: 'white'}} placeholder="Last Name"
 						/>
 						<Input
-							name="wl-company" value={formInput.company}
+							name="company" value={formInput.company}
 							style={{color: 'white'}} placeholder="Company"
 						/>
 						<Input
-							name="wl-email" value={formInput.email} type="email"
+							name="email" value={formInput.email} type="email"
 							style={{color: 'white'}} placeholder="Email"
 						/>
 					</div>
