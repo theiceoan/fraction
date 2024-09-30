@@ -3,8 +3,9 @@ import './App.css';
 import { Header } from './header/Header';
 import { LandingContent } from './landing-content/LandingContent';
 import { OurClients } from './our-clients/OurClients';
-import { WaitingList } from './waiting-list/WaitingList';
+import { WaitingList } from './forms/waiting-list/WaitingList';
 import { WhatWeDo } from './what-we-do/WhatWeDo';
+import { ContactUs } from './forms/contact-us/ContactUs';
 
 function App() {
   const [modalShow, setModalShow] = useState<boolean>(false);
@@ -31,6 +32,7 @@ function App() {
         <section id='what-we-do'>
           <WhatWeDo openModal={handleOpenModal} />
         </section>
+        <ContactUs />
       </main>
     </div>
   );
