@@ -1,13 +1,10 @@
 .contact-us-container {
 	background-color: white;
-}
-
-.form-container {
+  min-height: 60vh;
   display: flex;
-  flex-direction: column; /* Stack inputs vertically */
+  flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  gap: 1rem; /* Space between the inputs */
 }
 
 .contact-us.button {

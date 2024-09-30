@@ -6,6 +6,7 @@ import { OurClients } from './our-clients/OurClients';
 import { WaitingList } from './forms/waiting-list/WaitingList';
 import { WhatWeDo } from './what-we-do/WhatWeDo';
 import { ContactUs } from './forms/contact-us/ContactUs';
+import { Footer } from './footer/Footer';
 
 function App() {
   const [modalShow, setModalShow] = useState<boolean>(false);
@@ -33,6 +34,7 @@ function App() {
           <WhatWeDo openModal={handleOpenModal} />
         </section>
         <ContactUs />
+        <Footer />
       </main>
     </div>
   );
