@@ -18,8 +18,8 @@ export const WhatWeDo = ({ openModal }: WhatWeDoProps) => {
 						<Line />
 					</div>
 					<h4>
-						We're Built To <span className='highlight-green'>Deliver Software Projects</span> For All
-						Industries With A <span className='highlight-gold'>Cutting-Edge, Versatile</span> Technology Stack
+						We're Built To <b>Deliver Software Projects</b> For All
+						Industries With A <b>Cutting-Edge, Versatile</b> Technology Stack
 					</h4>
 				</div>
 				<div className='what-we-do-details-container'>
